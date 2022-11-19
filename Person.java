@@ -1,36 +1,36 @@
-package com.rtguigu.exer;
+package com.atguigu.java;
 
-public class Person {
-	
+public class Person extends Creature{
+
+	String name ;
 	private int age ;
-	private String name;
 	
 	public Person() {
-		age =18 ;
+		
 	}
 	
-	public Person(String n,int a) {
-		name = n;
-		age = a;
+	public Person(String name , int age) {
+		this.name = name;
+		this.age = age;
 	}
 	
-	public void setAge(int a) {
-		if(age > 130 || age < 0) {
-			System.out.println("输入有误");
-		}else {
-			age = a ;
-		}
+	public void eat() {
+		System.out.println("人吃饭");
+		sleep();
 	}
 	
+	private void sleep() {
+		System.out.println("睡觉");
+	}
+
 	public int getAge() {
 		return age;
 	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 	
-	public void setName(String n) {
-		name = n ;
-	}
-	public String getName() {
-		return name;
-	}
+	
 	
 }
