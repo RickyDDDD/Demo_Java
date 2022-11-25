@@ -1,36 +1,17 @@
-package com.atguigu.java;
+package com.java4;
 
-public class Person extends Creature{
-
-	String name ;
-	private int age ;
+public class Person {
 	
-	public Person() {
-		
-	}
-	
-	public Person(String name , int age) {
-		this.name = name;
-		this.age = age;
-	}
+	String name;
+	int id = 1001;
+	int age;
 	
 	public void eat() {
-		System.out.println("人吃饭");
-		sleep();
+		System.out.println("吃饭");
 	}
 	
-	private void sleep() {
-		System.out.println("睡觉");
-	}
-
-	public int getAge() {
-		return age;
+	public void walk() {
+		System.out.println("走路");
 	}
 
-	public void setAge(int age) {
-		this.age = age;
-	}
-	
-	
-	
 }

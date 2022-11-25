@@ -1,55 +1,57 @@
-package com.atguigu.java;
-
-public class AnimalTest {
-	
-	public static void main(String[] args) {
-		
-		Animal a = new Animal();
-		a.name = "大黄";
-//		a.age = 1 ;
-//		a.legs = 4;//The field Animal.legs is not visible
-		
-		a.show();
-		
-//		a.setLegs(-6);//The field Animal.legs is not visible
-		a.show();
-		System.out.println(a.name);
-		
-	}
-}
-
-class Animal{
-	String name;
-	private int age ;
-	private int legs; 
-	
-	public void setLegs(int l) {
-		if(l >= 0 && l % 2 == 0) {
-			legs = 1 ;
-		}else {
-			legs = 0 ;
-		}
-	}
-	
-	public int getLegs() {
-		return legs;
-	}
-	
-	public void eat() {
-		System.out.println("动物进食");
-	}
-	
-	public void show() {
-		System.out.println("name = " + name + ",age = " + age + ",legs = " + legs);
-	}
-	
-	public int getAge() {
-		return age;
-	}
-	
-	public int setAge(int a) {
-		age = a ;
-		return age;
-	}
-	
-}
+//package com.atguigu.java5;
+//
+//import java.util.Random;
+//
+//class Animal{
+//	protected void eat() {
+//		System.out.println("animal eat food");
+//	}
+//}
+//
+//class Cat extends Animal{
+//	protected void eat() {
+//		System.out.println("cat eat fish");
+//	}
+//}
+//
+//class Dog extends Animal{
+//	protected void eat() {
+//		System.out.println("dog eat bone");
+//	}
+//}
+//
+//class Sheep extends Animal{
+//	protected void eat() {
+//		System.out.println("sheep eat grass");
+//	}
+//}
+//
+//}
+//public class InterviewTest{
+//	public static Animal getInstance(int key) {
+//		switch(key) {
+//		case 0:
+//			return new Cat();
+//			
+//		case 1:
+//			return new Dog();
+//			
+//		case 2:
+//			return new Sheep();
+//		}
+//	}
+//
+//	public static void main(String[] args) {
+//		
+//		int key = new Random().nextInt(3);
+//		
+//		System.out.println(key);
+//		
+//		Animal animal = getInstance(key);
+//		
+//		animal.eat();
+//		
+//	}
+//}	
+//
+//

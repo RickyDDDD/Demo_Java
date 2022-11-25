@@ -1,16 +1,15 @@
-package com.atguigu.exer;
+package com.atguigu.java5;
 
 public class Circle {
-	
 	private double radius;
+	
 	public Circle() {
-		radius = 1.0;
+		radius = 1 ;
 	}
 	
 	public void setRadius(double radius) {
 		this.radius = radius;
 	}
-	
 	public double getRadius() {
 		return radius;
 	}

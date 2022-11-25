@@ -1,31 +1,54 @@
-package com.atguigu.exer5;
+package com.atguigu.java;
 
 public class Account {
 	
+	private int id ;
 	private double balance;
+	private double annuallnterestRate;//年利率
 	
-	public Account(double init_balance) {
-		this.balance = init_balance;
+	public Account() {
+		
 	}
-	
+	public Account(int id, double balance, double annuallnterestRate) {
+		this.id = id;
+		this.balance = balance;
+		this.annuallnterestRate = annuallnterestRate;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public double getBalance() {
 		return balance;
 	}
-	
-	public void deposit(double amt) {//存款
-		if(amt > 0) {
-			balance += amt;
-			System.out.println("存钱成功");
-		}
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+	public double getAnnuallnterestRate() {
+		return annuallnterestRate;
+	}
+	public void setAnnuallnterestRate(double annuallnterestRate) {
+		this.annuallnterestRate = annuallnterestRate;
 	}
 	
-	public void withdraw(double amt) {//取款
-		if(amt >0 && amt <= balance) {
-			balance -= amt;
-			System.out.println("取款成功");
+	public double getMonthlyInterest(){
+		return annuallnterestRate/12;
+	}
+	
+	public void withdraw(double amount) {//取款
+		if(amount > 0 && amount <= this.balance ) {
+			balance -= amount;
+			System.out.println("取款成功,余额剩: " + balance);
 		}else {
-			System.out.println("余额不足,取款失败");
+			System.out.println("输入有误！！");
 		}
 	}
-
-}
+	
+	public void deposit(double amount) {
+		balance += amount;
+		System.out.println("当前余额为：" + balance);
+		}
+	}
+	
