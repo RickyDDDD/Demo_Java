@@ -1,4 +1,4 @@
-package com.java4;
+package com.atguigu.java;
 
 import com.atguigu.java.Man;
 
@@ -23,7 +23,25 @@ public class PersonTest {
 		p2.walk();
 		
 		System.out.println(p2.id);
+		System.out.println("*****************************");
+		//如何调用子类特有的属性和方法：
+		//使用强制类型转换符（向下转型）
+		Man m1 =(Man)p2;
+		m1.earnMoney();
+		m1.isSmoking = true;
 		
+		System.out.println("****************************");
+		
+		if(p1 instanceof Woman) {
+			Woman w1 = (Woman)p2;
+			w1.goShopping();
+			System.out.println("*****Woman******");
+		}
+		if(p2 instanceof Man) {
+			Man m2 = (Man)p2;
+			m2.earnMoney();
+			System.out.println("*****Man******");
+		}		
 		
 	}
 }

@@ -1,4 +1,4 @@
-package com.java4;
+package com.atguigu.java;
 
 public class Person {
 	
